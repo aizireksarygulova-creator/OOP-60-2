@@ -1,0 +1,15 @@
+Команды для регистрации ваших данных
+git config --global user.name "aizireksarygulova-creator"
+git config --global user.email "aizireksarygulova@gmail.com"
+
+
+Команды для одного проекта
+
+git init    | Инициализация гита
+git remote add origin link_to_repository  |Добавление репозитория
+
+git status     | Статус репозитория
+
+git add.   | Добавление файлов в буфер обмена
+git commit -m "message"    | Сохранение всего из буфера обмена
+
