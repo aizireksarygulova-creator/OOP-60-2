@@ -7,28 +7,35 @@ class Book:
         self.pages = pages
         self.format = format
 
+    # Магический метод __str__ возвращает красивый вывод книги
     def __str__(self):
         return f'"{self.title}" — {self.author}, {self.pages} стр.'
 
+    # Возвращает количество страниц книги
     def __len__(self):
         return self.pages
 
+    # Складывает количество страниц двух книг
     def __add__(self, other):
         total = self.pages + other.pages
         return total
 
+    # Сравнивает книги по количеству страниц
     def __eq__(self, other):
         return self.pages == other.pages
 
+    # Возвращает строку по номеру главу
     def __getitem__(self, item):
         return f"Глава {item}: содержание книги '{self.title}'"
 
+
+    # Класс метод создает обьект книги из строки вида
     @classmethod
     def from_string(cls, s):
         title, author, pages = s.split(", ")
         return cls(title, author, int(pages))
 
-
+    # Статический метод проверяет толстая ли книга
     @staticmethod
     def is_thick(pages):
         return pages > 500
